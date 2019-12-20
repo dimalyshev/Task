@@ -11,8 +11,7 @@ namespace SquareCalculator.Tests
         [Theory]
         [InlineData(3, 2, 2, 3.9375)]
         [InlineData(2, 2, 2, 3)]
-        [InlineData(1, 1, 1, 3)]
-        // [InlineData()]
+        [InlineData(1, 1, 1, 0.1875 )]
         public void TestSquares(double a, double b, double c, double s)
         {
             // arrange

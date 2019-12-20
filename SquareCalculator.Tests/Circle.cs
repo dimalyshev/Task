@@ -9,10 +9,9 @@ namespace SquareCalculator.Tests
     public class CircleTest
     {
         [Theory]
-        [InlineData( 2, 3.9375)]
-        [InlineData(1, 3)]
         [InlineData(2, 4)]
-        // [InlineData()]
+        [InlineData(1, 1)]
+        [InlineData(4, 16)]
         public void TestSquares(double r, double s)
         {
             // arrange
@@ -20,7 +19,7 @@ namespace SquareCalculator.Tests
             // act
             var v = f.GetValue();
             // assert
-            Assert.Equal(v, s / Math.PI);
+            Assert.Equal(s * Math.PI, v);
         }
     }
 }
