@@ -11,7 +11,7 @@ namespace Figures
             get
             {
                 var f = new[] { _sides.a, _sides.b, _sides.c };
-                var p = f.Sum();
+                var p = f.Sum() / 2;
                 // prod = p * (p-a) * (p-b) * (p-c)
                 var prod = f.Aggregate(p, (_, side) => _ * (p - side));
                 return Math.Sqrt(prod);
